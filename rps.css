@@ -1,1 +1,45 @@
-my css code
+*{
+    outline: 1px solid red;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* In styles.css */
+
+@font-face {
+    font-family: 'MyCoolFont';  /* You pick this name */
+    src: url('./fonts/Klemer Display DEMO.ttf') format('truetype');
+}
+
+
+
+header {
+    display:flex;
+    border-style: dotted;
+    border-color: black;
+    border-width: 2px;
+    padding: 10px;
+    justify-content: center;
+    background-color: #7f5325;
+}
+
+#heading {
+   color: #feee09; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+   font-family: 'MyCoolFont', sans-serif;
+   font-size: 48px;
+   letter-spacing: 3px; 
+}
+
+#header-logo {
+    flex-basis: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    min-width: 0px;
+    height: auto;
+
+}   
+
