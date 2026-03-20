@@ -5,20 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="rps.css">
+    <script src="rps.js" defer></script>
 </head>
 <body>
-    <!--<script src="rps.js"></script>!-->
-
-    <header>
-        <img id = "header-logo" src="./images/Logo.png" alt="Company Logo">
-        <h1 id="heading">ROCK PAPER SCISSOR</h1>
+<header>
+        <img src="./images/Logo.png" alt="Company Logo">
+        <h1>ROCK PAPER SCISSOR</h1>
     </header>
 
-    <div id="rules"></div>
+    <div id="rules-section">
+        <h1>RULES</h1>
+        <h3>The GOAL is to defeat your opponent by selecting a hand signal that beats thier selection</h3>
+        <div id="rules">
+            <div>Rock crushes Scissors<br>( Rock wins )</div>
+            <div>Scissor crushes Paper<br>( Scissor wins )</div>
+            <div>Paper crushes Rock<br>( Paper wins )</div>
+        </div>
+    </div>
 
-    <div id="game"></div>
+    <div id="game">
+        <h1>LET'S PLAY</h1>
+        <div id="row1">
+            <div id="input-name">
+                <form>
+                <label for="item"></label>
+                <input type="text" name="username" id="username" placeholder="Enter your name">
+                </form>
+            </div>
+            <div id="input-bestof">
+                <form>
+                <label for="item"></label>
+                <input type="text" name="bestof" id="bestof" placeholder="Enter best of (1-5)">
+                </form>
+            </div>
+            <button id="input-startgame">START GAME</button>
+            <button id="input-resetgame">RESET</button>
+        </div>
+        
+        <div id="row2">  
+            <div id="row2-left">
+                <div id="chooseweapon-text">Choose your weapon</div>
+                <div id="input-weapon">
+                    <button id="input-rock">ROCK</button>
+                    <button id="input-paper">PAPER</button>
+                    <button id="input-scissor">SCISSOR</button>
+                </div>
+            </div>
+            <div id="scorecard">
+                <div id="r1">SCORECARD</div>
+                <div id="r2">
+                    <div id="p1">PLAYER NAME</div>
+                    <div id="p2">COMPUTER</div>
+                </div>
+                <div id="r3">
+                    <div id="p1s1"></div>
+                    <div id="p2s1"></div>
+                </div>
+                <div id="r4">
+                    <div id="p1s2"></div>
+                    <div id="p2s2"></div>
+                </div>
+                <div id="r5">
+                    <div id="p1s3"></div>
+                    <div id="p2s3"></div>
+                </div>
+                <div id="r6">
+                    <div id="p1s4"></div>
+                    <div id="p2s4"></div>
+                </div>
+                <div id="r7">
+                    <div id="p1s5"></div>
+                    <div id="p2s5"></div>
+                </div>
+                <div id="r8">
+                    <div id="p1total">TOTAL SCORE</div>
+                    <div id="p2total">TOTAL SCORE</div>
+                </div>
+            </div>
+        </div>
+        <div id="winner"></div>
 
-    <footer></footer>
+
+
+
+    </div>
+
+    <footer>BEST OF LUCK !</footer>
 
 </body>
 </html>

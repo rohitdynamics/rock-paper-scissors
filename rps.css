@@ -1,45 +1,350 @@
-*{
+/**{
     outline: 1px solid red;
+    margin: 0px;
+    padding: 0px;
+}*/
+
+*{
     margin: 0px;
     padding: 0px;
 }
 
-/* In styles.css */
+body {
+    margin: 0 auto;    /* Centers the entire website */
+    border-left: 2px dashed blue; /* Your Left Ruler */
+    border-right: 2px dashed blue; /* Your Right Ruler */
+}
+
+/* Since the header background usually stretches full-width, 
+   we move the background color to the body or a wrapper */
 
 @font-face {
-    font-family: 'MyCoolFont';  /* You pick this name */
+    font-family: 'MyCoolFont';
     src: url('./fonts/Klemer Display DEMO.ttf') format('truetype');
 }
 
-
-
 header {
-    display:flex;
+    display: flex;
     border-style: dotted;
     border-color: black;
     border-width: 2px;
     padding: 10px;
     justify-content: center;
     background-color: #7f5325;
+    align-items: center;
+    padding: 80px;
+    gap: 80px; 
 }
 
-#heading {
-   color: #feee09; 
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-   font-family: 'MyCoolFont', sans-serif;
-   font-size: 48px;
-   letter-spacing: 3px; 
+header h1 {
+    color: #feee09; 
+    font-family: 'MyCoolFont', sans-serif;
+    font-size: 56px;
+    letter-spacing: 3px; 
 }
 
-#header-logo {
-    flex-basis: 200px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: 50px;
+header img {
+    flex: 0 0 200px;
     min-width: 0px;
     height: auto;
 
-}   
+}
+
+#rules-section {
+
+    background-color: white;
+    padding: 80px;
+}
+
+#rules-section h1 {
+    color: #feee09; 
+    font-family: 'MyCoolFont', sans-serif;
+    font-size: 56px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#rules-section h3 {
+    text-align: center;
+    margin: 30px;
+    font-size: 32px;
+    margin-bottom: 45px;
+}
+
+#rules {
+    display: flex;
+    justify-content: center;
+    gap : 120px;
+}
+
+#rules > * {
+    
+    font-size: 32px;
+    text-align: center;
+    background-color: #feee09;
+    border-color: #7f5325;
+    border-width: 5px;
+    border-radius: 30px;
+    border-style: dashed;
+    padding: 15px;
+}
+
+#game {
+    padding: 80px;
+    background-color: #feee09;
+}
+
+#game h1 {
+    margin-bottom: 80px;
+    text-align: center;
+    color:#7f5325;
+    font-family: 'MyCoolFont', sans-serif;
+    font-size: 56px;
+    letter-spacing: 3px;
+}
+
+#row1 {
+    display:flex;
+    justify-content: center;
+    gap: 120px;
+    align-items: center;
+}
+
+#row1 > * {
+    font-size: 40px;
+    text-align: center;
+}
+
+/*#input-name, #input-bestof {
+    background-color: white;
+    border-style: solid;
+    border-color: #7f5325;
+    border-radius: 30px;
+    padding: 15px;
+    text-align: center;
+    font-family: 'MyCoolFont', sans-serif;
+    color: grey;
+    letter-spacing: 3px; 
+}*/
+
+/*form {
+    background-color: white;
+    border-style: solid;
+    border-color: #7f5325;
+    border-radius: 30px;
+    padding: 15px;
+}*/
+
+form input {
+    text-align: left;
+    color: grey;
+    letter-spacing: 3px;
+    font-size: 30px;
+    background-color: white;
+    border-style: solid;
+    border-color: #7f5325;
+    border-radius: 30px;
+    padding: 15px;
+    border-width: 6px;
+    max-width: 350px;
+}
+
+#input-startgame, #input-resetgame {
+   background-color:#7f5325;
+   border-radius: 30px;
+   padding: 15px;
+   text-align: center;
+   font-family: 'MyCoolFont', sans-serif;
+   border-style: solid;
+   border-color: #7f5325;
+   border-radius: 30px;
+   color: white;
+   letter-spacing: 3px; 
+}
+
+#row2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    gap: 150px
+}
+#row2-left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+}
+
+#row2-left #chooseweapon-text {
+    font-family: 'MyCoolFont', sans-serif;
+    font-size: 40px;
+    color: #7f5325;
+    letter-spacing: 3px; 
+
+}
+
+#input-weapon {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+}
+
+#input-weapon > * {
+    font-family: 'MyCoolFont', sans-serif;
+    font-size: 40px;
+    color: white;
+    background-color: #7f5325;
+    border-radius: 30px;
+    padding: 15px;
+    letter-spacing: 3px; 
+}
+
+#scorecard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#r2, #r3, #r4, #r5, #r6, #r7, #r8 {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+}
+
+#p1, #p2, #p1s1, #p2s1, #p1s2, #p2s2, #p1s3, #p2s3, #p1s4, #p2s4, #p1s5, #p2s5, #p1total, #p2total {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+#r2, #r8 {
+    background-color: #7f5325;
+    color: white;
+    font-weight: 800;
+}
+
+#r1, #r4, #r6 {
+    background-color: #feee09;
+    color: #7f5325;
+}
+
+#r3, #r5, #r7 {
+    background-color: white;
+    color: #7f5325;
+}
+
+#r1 {
+    font-family: 'MyCoolFont', sans-serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#scorecard > * {
+    flex: 1;
+}
+
+#p1total, #p2total {
+   font-size: 18px;
+   font-weight: 800;
+   text-align: center;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+#r1 {
+    border: 5px solid #7f5325;
+    border-bottom: none;
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#r8 {
+    border: 5px solid #7f5325;
+    border-top: none;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;  
+}
+
+#r3, #r4, #r5, #r6, #r7 {
+    border-left: 5px solid #7f5325;
+    border-right: 5px solid #7f5325;
+    border-right: 5px solid #7f5325;
+}
+
+#p1, #p1s1, #p1s2, #p1s3, #p1s4, #p1s5 {
+    border-right: 1px solid #7f5325;
+    height: 100%;
+}
+
+#p2, #p2s1, #p2s2, #p2s3, #p2s4, #p2s5 {
+    border-left: 1px solid #7f5325;
+    height: 100%;
+}
+
+#winner {
+    font-family: 'MyCoolFont', sans-serif;
+    font-size: 56px;
+    color: #7f5325;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 80px;
+}
+
+footer {
+    font-family: 'MyCoolFont', sans-serif;
+    background-color: #7f5325;
+    font-size: 56px;
+    color:#feee09;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
